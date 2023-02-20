@@ -1,0 +1,300 @@
+:root {
+
+   --fuenteHead: 'PT sans', sans-serif;
+   --fuenteParrafo: 'Open Sans', sans-serif;
+
+   --primario: #784d3c;
+   --blanco: #ffffff;
+   --gris: #e1e1e1;
+   --negro: #000000;
+}
+
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%; /*1rem = 10px*/
+}
+
+*,*:before,*:after {
+   box-sizing: inherit;
+}
+
+body {
+   font-family: var(--fuenteParrafo);
+   font-size: 1.6rem;
+   line-height: 2;
+}
+
+/*======================= Globales =======================*/
+
+.contenedor {
+   width: min(90% , 120rem); /* si tamaño de la pantalla es pequeño toma el valor menor sino el otro*/
+   margin: 0 auto;
+}
+
+a {
+   text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+   font-family: var(--fuenteHead);
+   line-height: 3.4rem;
+}
+
+h1 {
+   font-size: 4.8rem;
+}
+
+h2 {
+   font-size: 4rem;
+}
+
+h3 {
+   font-size: 3.2rem;
+}
+
+h4 {
+   font-size: 2.8rem;
+}
+
+img {
+   max-width: 100%;
+}
+
+/*======================= Utilidades =======================*/
+
+.no-margin {
+   margin: 0;
+}
+
+.no-padding {
+   padding: 0;
+}
+
+.txt-center {
+   text-align: center;
+}
+
+/*----------- BODY -----------*/
+/*webp si el navegador es capas de soportarlo lo carga*/
+.webp .header{
+   background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
+   background-image: url(../img/banner.jpg);
+}
+
+/*----- logo -----*/
+.header {
+   height: 60rem;
+   background-repeat: no repeat;
+   background-size: cover;
+   background-position: center center; /* x / y*/
+}
+
+.header__texto {
+   color: var(--blanco);
+   margin-top: 5rem;
+}
+
+.logo {
+   color: var(--blanco);
+}
+
+.logo__nombre {
+   font-weight: 400;
+}
+
+.logo__bold {
+   font-weight: 700;
+}
+
+/*----- navegacion -----*/
+.barra {
+   padding-top: 3rem;
+}
+
+.navegacion__enlace {
+   display: block;
+   font-size: 1.8rem;
+   color: var(--blanco);
+}
+
+/*----- entradas -----*/
+.entrada {
+   border-bottom: 1px solid var(--gris);
+   margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+   margin: 0;
+   border: none;
+}
+
+.boton {
+   display: block; /*Tomae el espacio dsiponible en cel*/
+   font-family: var(--fuenteHead);
+   color: var(--blanco);
+   text-align: center;
+   padding: 1rem 3rem;
+   font-size: 1.8rem;
+   text-transform: uppercase;
+   margin-bottom: 2rem;
+   font-weight: 700;
+   border: none;
+}
+
+.boton:hover {
+   cursor: pointer;
+}
+
+.boton--primario {
+   background-color: var(--negro);
+}
+
+.cursos {
+   list-style: none;
+}
+
+.boton--secundario {
+   background-color: var(--primario);
+}
+
+.widget-curso {
+   border-bottom: 1px solid var(--gris);
+   margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type {
+   border: none;
+   margin-bottom: 0;
+}
+
+.widget-curso__label,
+.curso__label {
+   font-family: var(--fuenteHead);
+   font-weight: bold;
+}
+
+.widget-curso__info,
+.curso__info {
+   font-weight: 400;
+}
+
+.widget-curso__info,
+.widget-curso__label {
+   font-size: 2rem;
+}
+
+/*----- curso -----*/
+.curso {
+   padding: 3rem 0;
+   border-bottom: 1px solid var(--gris);
+}
+
+/*----- contacto -----*/
+.contacto-bg {
+   background-image: url(../img/contacto.jpg);
+   height: 40rem;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+/*----- formulario -----*/
+.formulario {
+   background-color: var(--blanco);
+   border-radius: 1rem;
+   margin: -5rem auto 0 auto;
+   width: 95%;
+   padding: 5rem;
+}
+
+.campo {
+   display: flex;
+   margin-bottom: 2rem;
+   gap: 2rem;
+}
+
+.campo__label {
+   flex:  0 0 9rem;
+   text-align: right;
+}
+
+.campo__field {
+   flex: 1;
+   border: 1px solid var(--gris);
+   border-radius: .5rem;
+}
+
+.campo__field--textarea {
+   height: 20rem;
+}
+
+.formulario__boton {
+   width: 100%;
+   border-radius: .5rem;
+}
+
+/*----- footer -----*/
+.footer {
+   margin-top: 3rem;
+   padding: 3rem;
+   background-color: var(--negro);
+}
+
+/*======================= Responsive =======================*/
+
+@media (min-width: 768px){
+
+   .header__texto {
+      margin-top: 15rem;
+   }
+
+   /*----- navegacion -----*/
+   .barra {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .navegacion {
+      display: flex;
+      gap: 2rem;
+   }
+
+   /*----- entradas -----*/
+   .contenido-p {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 4rem;
+   }
+
+   .boton {
+      display: inline-block; /*con inline - no asen caso al margin y width con inline-block si los toma pero le da una propiedad de inline*/
+   }
+
+   /*----- nosotros -----*/
+   .sobre-nosotros {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+   }
+
+   /*----- curso -----*/
+   .curso {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 2rem;
+   }
+
+   .curso:last-of-type {
+      border: none;
+   }
+
+   .entrada-blog {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+}

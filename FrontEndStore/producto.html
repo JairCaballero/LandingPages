@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="preload" href="./css/normalize.css" as="style">
+   <link rel="stylesheet" href="./css/normalize.css"> <!--Estandariza un poco el css para verse igual en diferentes navegadores-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+   <link rel="preload" href="./css/styles.css" as="style"> <!--Precarga-->
+   <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+   <header class="header">
+      <a href="index.html">
+         <img class="header__logo" src="./img/logo.png" alt="Logotipo">
+      </a>
+   </header>
+
+   <nav class="nav">
+      <a class="nav__enlace nav__enlace--activo" href="index.html">Tienda</a>
+      <a class="nav__enlace" href="nosotros.html">Nosotros</a>
+   </nav>
+
+   <main class="contenedor">
+      <h1>React JS</h1>
+
+      <div class="camisa">
+         <img class="camisa__image" src="./img/3.jpg" alt=" imagen producto">
+
+         <div class="camisa__info">
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima, harum sequi temporibus assumenda, dolore
+               vel iure dolor,dignissimos ab magnam illum ipsum animi aspernatur id nisi quo! Id, eligendi.
+            </p>
+
+            <form class="formulario">
+               <select class="formulario__campo">
+                  <option disabled selected>Seleccionar Talla</option>
+                  <option>Chica</option>
+                  <option>Mediana</option>
+                  <option>grande</option>
+               </select>
+               <input class="formulario__campo" type="number" value="Cantidad" min="1">
+               <input class="formulario__submit" type="submit" value="Agregar al Caroo">
+            </form>
+         </div>
+      </div>
+   </main>
+
+   <footer class="footer">
+      <p class="footer__texto">Front End - Todos los derechos reservados 2022</p>
+   </footer>
+</body>
+
+</html>

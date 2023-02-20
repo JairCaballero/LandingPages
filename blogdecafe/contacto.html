@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="pagina web de blog de cafe">
+   <title>Coofee</title>
+   <link rel="preload" href="./css/normalize.css" as="style">
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=Staatliches&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Open+Sans&family=PT+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+   <link rel="preload" href="./css/style.css" as="style">
+   <link rel="stylesheet" href="./css/style.css">
+
+   <!-- preload cargar elementos-->
+   <!-- <link rel="preload" href="./img/blog1.jpg" as="image"> -->
+
+   <!-- prefetch precargar una pagina que esperamos que el usuario ingrese par que asi no demore tanto-->
+   <link rel="prefetch" href="cursos.html" as="document">
+</head>
+
+<body>
+
+   <header class="header">
+
+      <div class="contenedor">
+         <div class="barra">
+               <a class="logo" href="index.html">
+                  <h1 class="logo__nombre no-margin txt-center">Blog <samp class="logo__bold">Coofee</samp></h1>
+               </a>
+
+               <nav class="navegacion txt-center">
+                  <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                  <a class="navegacion__enlace" href="cursos.html">Cursos</a>
+                  <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+               </nav>
+         </div>
+      </div>
+
+      <div class="header__texto txt-center">
+         <h2 class="no-margin">Blog de cafe Consejos y Cursos</h2>
+         <p>Aprende de expertos, las mejores recetas y consejos</p>
+      </div>
+
+   </header>
+
+   <div class="contenedor">
+      <h3 class="txt-center">Contacto</h3>
+
+      <div class="contacto-bg"></div>
+
+
+      <form class="formulario">
+         <div class="campo">
+            <label class="campo__label" for="nombre">Nombre</label>
+            <input class="campo__field" id="nombre" type="text" placeholder="Tu Nombre">
+         </div>
+
+         <div class="campo">
+            <label class="campo__label" for="email">Email</label>
+            <input class="campo__field" id="email" type="text" placeholder="Email">
+         </div>
+
+         <div class="campo">
+            <label class="campo__label" for="mensaje">Msensaje</label>
+            <textarea class="campo__field campo__field--textarea" id="mensaje" placeholder="Mensaje"></textarea>
+         </div>
+
+         <div class="campo">
+            <input type="submit" value="Enviar" class="boton boton--primario formulario__boton">
+         </div>
+      </form>
+   </div>
+
+   <footer class="footer">
+      <div class="contenedor">
+         <div class="barra">
+               <a class="logo" href="index.html">
+                  <h1 class="logo__nombre txt-center">Blog <samp class="logo__bold">Coofee</samp></h1>
+               </a>
+
+               <nav class="navegacion txt-center">
+                  <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                  <a class="navegacion__enlace" href="cursos.html">Cursos</a>
+                  <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+               </nav>
+         </div>
+      </div>
+   </footer>
+
+   <script src="./js/modernizr.js"></script>
+</body>
+
+</html>

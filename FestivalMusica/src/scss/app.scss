@@ -1,0 +1,10 @@
+/*Vieja sintaxsix --ase que las variables se puedieran usar en cualqueir archivo*/
+// @import 'base/variables';
+// @import 'contenido/contenido';
+
+/*Nueva Sintaxsix -- nececita que en las carpetas este el index.scss*/
+@use 'base'; /*ira al index que llama a los demas archivos*/
+@use 'layout';
+
+
+

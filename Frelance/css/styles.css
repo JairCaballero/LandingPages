@@ -1,0 +1,302 @@
+/*Pseudoelemento <-- No existe como tal pero aca se almacenan variables*/
+:root {
+   --blanco: #ffffff;
+   --ocuro: #000000;
+   --primario: #ffc107;
+   --secundario: #0097a7;
+   --gris: #757575;
+   --gris-claro: #dfe9f3;
+}
+
+/* Globales */
+html {
+   font-size: 62.5%;
+   /* Para que cuando defines un tamaño y le agreges padin o mas, este tamaño no se modifique osea no se aga mas grande sino que se tome del que ya definiste*/
+   box-sizing: border-box;
+   scroll-snap-type: y  proximity; /*El tiron que te baja - proximity no te manda tan rapido*/
+}
+
+/*Detener el scrool en cada apartado*/
+.cont-servicios,
+.nav-bg,
+.cont-formulario {
+   scroll-snap-align: center;
+   scroll-snap-stop: always;
+}
+
+/*esto apoya el border-box de arriba*/
+*, *::before *::after {
+   box-sizing: inherit;
+}
+
+body {
+   font-size: 16px; /* 1rem  = 10px*/
+   font-family: 'Krub', sans-serif;
+   background-image: linear-gradient(to top,var(--gris-claro) 0%,var(--blanco) 100%);
+}
+
+h1 {
+   font-size: 3.8rem;
+}
+
+h2 {
+   font-size: 2.8rem;
+}
+
+h3 {
+   font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+   text-align: center;
+}
+
+/* Botones */
+.boton {
+   background-color: var(--secundario);
+   color: var(--blanco);
+   padding: 1rem 3rem;
+   margin-top: 1rem;
+   font-size: 2rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bold;
+   border-radius: .5rem;
+   width: 75%;
+   text-align: center;
+   border: none;
+}
+
+.boton:hover {
+   cursor: pointer;
+}
+
+/* Sombra */
+.sombra {
+   box-shadow: 0px 9px 10px 0px rgba(130,130,130,1);
+   background-color: var(--blanco);
+   border-radius: 1rem;
+}
+
+/* Titulo */
+.title span {
+   font-size: 2rem;
+}
+
+
+/* Navegacion */
+.nav-bg {
+   background-color: var(--secundario);
+}
+
+.contenedor {
+   max-width: 120rem;
+   margin: 0 auto;
+}
+
+#nav{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+#nav a {
+   text-decoration: none;
+   color: var(--blanco);
+   font-size: 2rem;
+   font-weight: bold;
+   padding: 1rem;
+}
+
+#nav a:hover {
+   background-color: var(--primario);
+   color: var(--ocuro);
+}
+
+
+/* Imagen Hero */
+.hero {
+   background-image: url("../img/hero.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   height: 450px;
+   margin-bottom: 3rem;
+}
+
+.contenido-hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, .4);
+   position: absolute;
+   width: 100%;
+   height: 100%;
+}
+
+.contenido-hero h2,
+.contenido-hero h1,
+.contenido-hero p {
+   color: var(--blanco);
+}
+
+.ubicacion-hero {
+   display: flex;
+   align-items: flex-end;
+}
+
+/* Servicios */
+.title-servicios {
+   padding: 2rem 0 0 0;
+}
+
+.servicio {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.servicio h3 {
+   color: var(--secundario);
+   font-weight:400;
+}
+
+.servicio p {
+   line-height: 2;
+   text-align: center;
+}
+
+.servicio .iconos {
+   height: 15rem;
+   width: 15rem;
+   background-color: var(--primario);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Formulario */
+.cont-formulario {
+   padding-bottom: 2.5rem;
+}
+
+.formulario {
+   background-color: var(--gris);
+   width: min(60rem,85%); /*Utiliza el valor mas pequeño */
+   margin: 0 auto; /*Solo utilizalo cuando el padre no tenga displey flex*/
+   padding: 2rem;
+   border-radius: 1rem;
+}
+
+.formulario fieldset {
+ border: none;
+}
+
+.formulario legend {
+   text-align: center;
+   font-size: 1.8rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   margin-bottom: 2rem;
+   color: var(--primario);
+
+}
+
+.campo {
+   margin-bottom: 1rem;
+}
+
+.campo label {
+   color: var(--blanco);
+   font-weight: bold;
+   margin-bottom: 1.5rem;
+   display: block;
+}
+
+.campo textarea {
+   height: 20rem;
+}
+
+.input-text {
+   width: 97%;
+   border: none;
+   padding: 1.5rem 0 1.5rem 1.5rem;
+   border-radius: .5rem;
+}
+
+.form-boton {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Footer */
+.footer {
+   padding-top: 1rem;
+   padding-bottom: .5rem;
+   margin-top: 2.5rem;
+   text-align: center;
+   background-color: var(--secundario);
+}
+
+/*
+=============================RESPONSIBE==========================
+*/
+
+/*DE 480 asia arriba*/
+@media (min-width: 480px) {
+   .boton {
+      width: auto;
+   }
+   .form-boton .boton {
+      width: 100%;
+   }
+
+}
+
+/*DE 768 asia arriba*/
+@media (min-width: 768px) {
+
+   #nav {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   /* Servicios */
+   .cont-servicios{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      column-gap: 1rem;
+      padding: 2rem;
+   }
+
+   .contenedor-campo {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto auto 20rem;
+      column-gap: 2rem;
+      margin-bottom: 9rem;
+   }
+
+   .campo:nth-child(3),
+   .campo:nth-child(4) {
+      grid-column: 1/3;
+   }
+
+}
+
+/*DE 1140 asia arriba*/
+@media (min-width: 1140px) {
+
+}
+
+/*DE 1400 asia arriba*/
+@media (min-width: 1400px) {
+
+}
+
+
+
+
